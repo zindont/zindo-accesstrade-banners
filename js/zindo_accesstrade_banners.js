@@ -16,8 +16,10 @@
             })
             .done(function(data) {
                 data = data.data;
-                var html = display_promotion(data);
-                $this.html(html);
+                if (data.length > 0) {
+                    var html = display_promotion(data);
+                    $this.html(html);    
+                };
             })             
         });
 
